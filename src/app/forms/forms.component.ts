@@ -25,7 +25,7 @@ export class FormsComponent {
     return this.skillForm.get('skills') as FormArray;
   }
   newSkills():FormGroup{
-    console.log(this.skills.controls);
+  
     return this.fb.group({
       skill: [''],
       exp: ['']
@@ -33,7 +33,7 @@ export class FormsComponent {
   }
   addSkill(){
     this.skills.push(this.newSkills());
-   
+
   }
   removeSkill(i:number){
     this.skills.removeAt(i);

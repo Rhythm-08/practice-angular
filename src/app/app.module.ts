@@ -8,13 +8,15 @@ import { CustomDirective } from './custom.directive';
 import { HostBindDirective } from './host-bind.directive';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GeekComponent } from './geek/geek.component';
 @NgModule({
   declarations: [
     AppComponent,
     MyDirectiveDirective,
     CustomDirective,
     HostBindDirective,
-    FormsComponent
+    FormsComponent,
+    GeekComponent
   ],
   imports: [
     BrowserModule,
