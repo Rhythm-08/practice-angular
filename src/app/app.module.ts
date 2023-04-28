@@ -6,16 +6,19 @@ import { AppComponent } from './app.component';
 import { MyDirectiveDirective } from './my-directive.directive';
 import { CustomDirective } from './custom.directive';
 import { HostBindDirective } from './host-bind.directive';
-
+import { FormsComponent } from './forms/forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     MyDirectiveDirective,
     CustomDirective,
-    HostBindDirective
+    HostBindDirective,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
