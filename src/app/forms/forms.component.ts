@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, Validators,FormBuilder,FormArray} from '@angular/forms';
+import { delay, map, of } from 'rxjs';
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
@@ -8,6 +9,9 @@ import {FormControl, FormGroup, Validators,FormBuilder,FormArray} from '@angular
 export class FormsComponent {
   skillForm!:FormGroup
 
+
+
+
   constructor(private fb:FormBuilder) {
     this.initMyForm();
 
@@ -15,7 +19,7 @@ export class FormsComponent {
 
   initMyForm(){
     this.skillForm=this.fb.group({
-      firstName:new FormControl('',Validators.required),
+      firstName:new FormControl('',[Validators.required]),
       lastName:new FormControl('',Validators.required),
       skills:this.fb.array([])
     })
@@ -25,7 +29,7 @@ export class FormsComponent {
     return this.skillForm.get('skills') as FormArray;
   }
   newSkills():FormGroup{
-  
+
     return this.fb.group({
       skill: [''],
       exp: ['']
@@ -41,6 +45,7 @@ export class FormsComponent {
   onSubmit(){
     console.log(this.skillForm.value);
   }
+
 
 
 }

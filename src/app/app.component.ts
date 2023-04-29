@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, isDevMode } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'sampleAngularProj';
+  ngOnInit(){
+    if(isDevMode()){
+      console.log('Dev Mode')
+    }
+    else {
+      console.log('{Production Mode}');
+    }
+  }
+
+
 }
