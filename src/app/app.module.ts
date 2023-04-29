@@ -10,6 +10,8 @@ import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GeekComponent } from './geek/geek.component';
 import { MinorModuleModule } from './minor-module/minor-module.module';
+import { ViewChildComponent } from './view-child/view-child.component';
+import { ViewChildrenComponent } from './view-children/view-children.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,8 @@ import { MinorModuleModule } from './minor-module/minor-module.module';
     HostBindDirective,
     FormsComponent,
     GeekComponent,
+    ViewChildComponent,
+    ViewChildrenComponent,
   ],
   imports: [
     BrowserModule,
